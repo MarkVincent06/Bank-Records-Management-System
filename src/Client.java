@@ -1,66 +1,69 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Client {
-    // instance variables
-    private int id;
-    private String name;
-    private String address;
-    private String phone;
-    private List<Account> accounts;
+    private String clientId;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
+    private String email;
+    private ArrayList<Account> accounts;
   
-    // constructor
-    public Client(int id, String name, String address, String phone) {
-      this.id = id;
-      this.name = name;
-      this.address = address;
-      this.phone = phone;
+    public Client(String clientId, String firstName, String lastName, String phoneNumber, String email) {
+      this.clientId = clientId;
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.phoneNumber = phoneNumber;
+      this.email = email;
       this.accounts = new ArrayList<>();
     }
   
-    // getter and setter methods
-    public int getId() {
-      return id;
+    // getters and setters for each instance variable
+    public String getClientId() {
+      return clientId;
     }
   
-    public void setId(int id) {
-      this.id = id;
+    public void setClientId(String clientId) {
+      this.clientId = clientId;
     }
   
-    public String getName() {
-      return name;
+    public String getFirstName() {
+      return firstName;
     }
   
-    public void setName(String name) {
-      this.name = name;
+    public void setFirstName(String firstName) {
+      this.firstName = firstName;
     }
   
-    public String getAddress() {
-      return address;
+    public String getLastName() {
+      return lastName;
     }
   
-    public void setAddress(String address) {
-      this.address = address;
+    public void setLastName(String lastName) {
+      this.lastName = lastName;
     }
   
-    public String getPhone() {
-      return phone;
+    public String getPhoneNumber() {
+      return phoneNumber;
     }
   
-    public void setPhone(String phone) {
-      this.phone = phone;
+    public void setPhoneNumber(String phoneNumber) {
+      this.phoneNumber = phoneNumber;
     }
   
-    public List<Account> getAccounts() {
+    public String getEmail() {
+      return email;
+    }
+  
+    public void setEmail(String email) {
+      this.email = email;
+    }
+  
+    public ArrayList<Account> getAccounts() {
       return accounts;
     }
   
-    // other methods
-    public void addAccount(Account account) {
-      accounts.add(account);
-    }
-  
-    public void removeAccount(Account account) {
-      accounts.remove(account);
+    public void setAccounts(ArrayList<Account> accounts) {
+      this.accounts = accounts;
     }
   }
+  

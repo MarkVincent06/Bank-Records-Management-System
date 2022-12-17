@@ -1,45 +1,35 @@
 public class Loan {
-    // instance variables
-    private int id;
-    private Account account;
-    private double amount;
+    private String loanId;
+    private double loanAmount;
     private double interestRate;
-    private int term; // in months
-    private double monthlyPayment;
+    private int term; //in months
+    private Client borrower;
+    private Account account;
   
-    // constructor
-    public Loan(int id, Account account, double amount, double interestRate, int term) {
-      this.id = id;
-      this.account = account;
-      this.amount = amount;
+    public Loan(String loanId, double loanAmount, double interestRate, int term, Client borrower, Account account) {
+      this.loanId = loanId;
+      this.loanAmount = loanAmount;
       this.interestRate = interestRate;
       this.term = term;
-      this.monthlyPayment = calculateMonthlyPayment();
-    }
-  
-    // getter and setter methods
-    public int getId() {
-      return id;
-    }
-  
-    public void setId(int id) {
-      this.id = id;
-    }
-  
-    public Account getAccount() {
-      return account;
-    }
-  
-    public void setAccount(Account account) {
+      this.borrower = borrower;
       this.account = account;
     }
   
-    public double getAmount() {
-      return amount;
+    // getters and setters for each instance variable
+    public String getLoanId() {
+      return loanId;
     }
   
-    public void setAmount(double amount) {
-      this.amount = amount;
+    public void setLoanId(String loanId) {
+      this.loanId = loanId;
+    }
+  
+    public double getLoanAmount() {
+      return loanAmount;
+    }
+  
+    public void setLoanAmount(double loanAmount) {
+      this.loanAmount = loanAmount;
     }
   
     public double getInterestRate() {
@@ -58,14 +48,20 @@ public class Loan {
       this.term = term;
     }
   
-    public double getMonthlyPayment() {
-      return monthlyPayment;
+    public Client getBorrower() {
+      return borrower;
     }
   
-    // other methods
-    private double calculateMonthlyPayment() {
-      double monthlyInterestRate = interestRate / 12;
-      double monthlyPayment = amount * monthlyInterestRate / (1 - Math.pow(1 + monthlyInterestRate, -term));
-      return monthlyPayment;
+    public void setBorrower(Client borrower) {
+      this.borrower = borrower;
+    }
+  
+    public Account getAccount() {
+      return account;
+    }
+  
+    public void setAccount(Account account) {
+      this.account = account;
     }
   }
+  

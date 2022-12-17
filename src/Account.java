@@ -1,22 +1,22 @@
 public class Account {
-    // instance variables
-    private int accountNumber;
+    private String accountNumber;
     private String accountType;
     private double balance;
+    private Client owner;
   
-    // constructor
-    public Account(int accountNumber, String accountType, double balance) {
+    public Account(String accountNumber, String accountType, double balance, Client owner) {
       this.accountNumber = accountNumber;
       this.accountType = accountType;
       this.balance = balance;
+      this.owner = owner;
     }
   
-    // getter and setter methods
-    public int getAccountNumber() {
+    // getters and setters for each instance variable
+    public String getAccountNumber() {
       return accountNumber;
     }
   
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
       this.accountNumber = accountNumber;
     }
   
@@ -36,17 +36,12 @@ public class Account {
       this.balance = balance;
     }
   
-    // other methods
-    public void deposit(double amount) {
-      balance += amount;
+    public Client getOwner() {
+      return owner;
     }
   
-    public void withdraw(double amount) {
-      balance -= amount;
-    }
-  
-    public void transfer(double amount, Account other) {
-      balance -= amount;
-      other.balance += amount;
+    public void setOwner(Client owner) {
+      this.owner = owner;
     }
   }
+  

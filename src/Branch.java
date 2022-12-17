@@ -1,40 +1,23 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Branch {
-    // instance variables
-    private int id;
-    private String name;
+    private String branchId;
     private String address;
-    private String phone;
-    private List<Client> clients;
-    private List<Loan> loans;
+    private ArrayList<Client> clients;
   
-    // constructor
-    public Branch(int id, String name, String address, String phone) {
-      this.id = id;
-      this.name = name;
+    public Branch(String branchId, String address) {
+      this.branchId = branchId;
       this.address = address;
-      this.phone = phone;
       this.clients = new ArrayList<>();
-      this.loans = new ArrayList<>();
     }
   
-    // getter and setter methods
-    public int getId() {
-      return id;
+    // getters and setters for each instance variable
+    public String getBranchId() {
+      return branchId;
     }
   
-    public void setId(int id) {
-      this.id = id;
-    }
-  
-    public String getName() {
-      return name;
-    }
-  
-    public void setName(String name) {
-      this.name = name;
+    public void setBranchId(String branchId) {
+      this.branchId = branchId;
     }
   
     public String getAddress() {
@@ -45,36 +28,22 @@ public class Branch {
       this.address = address;
     }
   
-    public String getPhone() {
-      return phone;
-    }
-  
-    public void setPhone(String phone) {
-      this.phone = phone;
-    }
-  
-    public List<Client> getClients() {
+    public ArrayList<Client> getClients() {
       return clients;
     }
   
-    public List<Loan> getLoans() {
-      return loans;
+    public void setClients(ArrayList<Client> clients) {
+      this.clients = clients;
     }
   
-    // other methods
+    // method to add a new client to the branch
     public void addClient(Client client) {
       clients.add(client);
     }
   
+    // method to remove a client from the branch
     public void removeClient(Client client) {
       clients.remove(client);
     }
-  
-    public void addLoan(Loan loan) {
-      loans.add(loan);
-    }
-  
-    public void removeLoan(Loan loan) {
-      loans.remove(loan);
-    }
   }
+  

@@ -1,41 +1,35 @@
 import java.util.Date;
 
 public class Transaction {
-    // instance variables
-    private int id;
-    private Date date;
-    private Account account;
+    private String transactionId;
+    private Date transactionDate;
     private double amount;
     private String description;
+    private Account account;
   
-    // constructor
-    public Transaction(int id, Account account, double amount, String description) {
-      this.id = id;
-      this.date = new Date();
-      this.account = account;
+    public Transaction(String transactionId, Date transactionDate, double amount, String description, Account account) {
+      this.transactionId = transactionId;
+      this.transactionDate = transactionDate;
       this.amount = amount;
       this.description = description;
-    }
-  
-    // getter and setter methods
-    public int getId() {
-      return id;
-    }
-  
-    public void setId(int id) {
-      this.id = id;
-    }
-  
-    public Date getDate() {
-      return date;
-    }
-  
-    public Account getAccount() {
-      return account;
-    }
-  
-    public void setAccount(Account account) {
       this.account = account;
+    }
+  
+    // getters and setters for each instance variable
+    public String getTransactionId() {
+      return transactionId;
+    }
+  
+    public void setTransactionId(String transactionId) {
+      this.transactionId = transactionId;
+    }
+  
+    public Date getTransactionDate() {
+      return transactionDate;
+    }
+  
+    public void setTransactionDate(Date transactionDate) {
+      this.transactionDate = transactionDate;
     }
   
     public double getAmount() {
@@ -53,4 +47,13 @@ public class Transaction {
     public void setDescription(String description) {
       this.description = description;
     }
+  
+    public Account getAccount() {
+      return account;
+    }
+  
+    public void setAccount(Account account) {
+      this.account = account;
+    }
   }
+  
