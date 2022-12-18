@@ -43,5 +43,13 @@ public class Account {
     public void setOwner(Client owner) {
       this.owner = owner;
     }
+
+    public void deposit(double amount) {
+      balance += amount;
+    }
+  
+    public void withdraw(double amount) {
+      balance -= amount;
+    }
   }
   
