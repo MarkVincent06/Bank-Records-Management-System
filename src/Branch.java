@@ -2,11 +2,13 @@ import java.util.ArrayList;
 
 public class Branch {
     private String branchId;
+    private String name;
     private String address;
     private ArrayList<Client> clients;
   
-    public Branch(String branchId, String address) {
+    public Branch(String branchId, String name, String address) {
       this.branchId = branchId;
+      this.name = name;
       this.address = address;
       this.clients = new ArrayList<>();
     }
@@ -18,6 +20,14 @@ public class Branch {
   
     public void setBranchId(String branchId) {
       this.branchId = branchId;
+    }
+
+    public String getName() {
+      return name;
+    }
+  
+    public void setName(String name) {
+      this.name = name;
     }
   
     public String getAddress() {
