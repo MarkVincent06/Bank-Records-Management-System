@@ -1,18 +1,14 @@
-import java.util.Date;
-
 public class Transaction {
     private String transactionId;
-    private Date transactionDate;
+    private String transactionDate;
     private double amount;
     private String description;
-    private Account account;
-  
-    public Transaction(String transactionId, Date transactionDate, double amount, String description, Account account) {
+      
+    public Transaction(String transactionId, String transactionDate, double amount, String description) {
       this.transactionId = transactionId;
       this.transactionDate = transactionDate;
       this.amount = amount;
       this.description = description;
-      this.account = account;
     }
   
     // getters and setters for each instance variable
@@ -24,11 +20,11 @@ public class Transaction {
       this.transactionId = transactionId;
     }
   
-    public Date getTransactionDate() {
+    public String getTransactionDate() {
       return transactionDate;
     }
   
-    public void setTransactionDate(Date transactionDate) {
+    public void setTransactionDate(String transactionDate) {
       this.transactionDate = transactionDate;
     }
   
@@ -46,14 +42,6 @@ public class Transaction {
   
     public void setDescription(String description) {
       this.description = description;
-    }
-  
-    public Account getAccount() {
-      return account;
-    }
-  
-    public void setAccount(Account account) {
-      this.account = account;
     }
   }
   
